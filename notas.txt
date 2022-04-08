@@ -55,3 +55,20 @@ Instalación con Create React App.
   ReactDOM.render es donde enviaremos los componentes que queremos renderizar.
   Babel es el que hace la traducción que nos facilita la escritura de código de una manera más cómoda.
   npm start para ejecutar el servidor de desarrollo.
+
+JSX: componentes vs. elementos (y props vs. atributos)
+  Podemos crear componentes usando:
+
+    class componente extends React.component : Aunque ya casi nadie usa esta forma de crear componentes.
+    function App (){} : Por convención se empiezan con mayúscula.
+
+  Se usa “className” en los elementos HTML para evitar confusión entre las clases de JS y las de HTML.
+  Los componentes son invisibles para HTML pero si son visibles para React y este los puede usar para renderizar 
+  de la forma más optimizada posible.
+  Lo que renderiza react en HTML son los elementos.
+  Usamos JSX para que con una sintaxis parecida a HTML podamos escribir de manera más entendible el código.
+  Los componentes pueden tener propiedades haciendo más interactivo el componente. Por ejemplo usando props.saludo.
+  Usando las propiedades podemos reutilizar un mismo componente muchas veces ahorrándonos trabajo.
+  Todas las propiedades las podemos mandar de dos formas, como lo vimos en la clase
+  <App saludo=“Buenas” /> o usando “children” <App>Buenaaaaaas</App>(donde podemos poner también etiquetas de HTML) y 
+  usandolo con props.children
