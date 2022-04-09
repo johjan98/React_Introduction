@@ -1,11 +1,30 @@
 import React from "react";
+import './TodoItem.css';
 
-export function TodoItem(props){
+export function TodoItem({text, completed, onComplete, onDelete}){
+
   return (
-    <li>
-      <span>C</span>
-      <p>{props.text}</p>
-      <span>X</span>
+    <li className="item">
+      <span 
+        className={`check-item ${completed && 'check-item--active'}`} 
+        onClick={onComplete}
+      >
+        ✔
+      </span>
+
+      <p 
+        className={`text-item ${completed && 'text-item--completed'}`}
+      >
+        {text}
+      </p>
+
+      <span 
+        className="delete-item" 
+        onClick={onDelete}
+      >
+        X
+      </span>
+
     </li>
   )
 }

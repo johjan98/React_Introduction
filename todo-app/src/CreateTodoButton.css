@@ -1,0 +1,20 @@
+.add-todo{
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(1, 184, 1);
+  position: fixed;
+  bottom: 5vh;
+  right: 10vw;
+  font-weight: 500;
+  font-size: 50px;
+
+  transform: rotate(0deg);
+  transition: .3s ease;
+}
+
+.add-todo:hover{
+  transform: rotate(45deg);
+  cursor: pointer;
+}
