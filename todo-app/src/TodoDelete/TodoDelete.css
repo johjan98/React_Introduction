@@ -1,0 +1,12 @@
+
+.icon-delete{
+  position: relative;
+  top: 15px;
+  right: 10px;
+  margin-left: 15px;
+}
+
+.icon-delete:hover {
+  color: red;
+  cursor: pointer;
+}

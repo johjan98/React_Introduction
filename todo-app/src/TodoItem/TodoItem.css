@@ -1,7 +1,7 @@
 .item{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 8px;
   border: 1px solid;
   margin: 30px;
@@ -10,35 +10,6 @@
   background-color: rgb(54, 54, 238);
 }
 
-.check-item{
-  position: relative;
-  top: 15px;
-  left: 0px;
-  margin-right: 15px;
-}
-
-.check-item--active{
-  color: lime;
-}
-
 .text-item--completed{
   text-decoration: line-through;
-}
-
-.delete-item{
-  position: relative;
-  top: 15px;
-  right: 5px;
-  margin-left: 15px;
-  font-weight: 700;
-}
-
-.delete-item:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.check-item:hover{
-  color: lime;
-  cursor: pointer;
 }

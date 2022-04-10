@@ -1,0 +1,16 @@
+
+.icon-check{
+  position: relative;
+  top: 15px;
+  left: 10px;
+  margin-right: 15px;
+}
+
+.icon-check--completed{
+  color: lime;
+}
+
+.icon-check:hover{
+  cursor: pointer;
+  color: lime;
+}
