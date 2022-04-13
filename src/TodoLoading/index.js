@@ -1,7 +1,10 @@
 import React from "react";
+import './TodoLoading.css';
 
 export function TodoLoading(){
   return (
-    <p>Cargando, por favor espera un momento</p>
-  )
+    <div className="loading-container">
+      <p>Cargando, por favor espera un momento</p>
+    </div>
+  );
 }

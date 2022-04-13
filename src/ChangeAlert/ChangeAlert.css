@@ -1,0 +1,60 @@
+.main-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.color{  
+  background: rgba(5, 5, 133, 0.7);
+}
+
+.alert-container{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 80vw;
+  border: 1px dotted rgb(255, 187, 0);
+  border-radius: 10px;
+  background-color: rgb(54, 54, 200);
+}
+
+.load-button{
+  border: 1px black solid;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  padding: 8px;
+  position: relative;
+  top: 7px;
+  right: 7px;
+}
+
+.load-button:hover{
+  cursor: pointer;
+  box-shadow: 0px 5px 10px black;
+}
+
+.warning{
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  color: rgb(255, 187, 0);
+  position: relative;
+  top: 10px;
+  left: 7px;
+}
+
+@media screen and (min-width: 767px){
+  .alert-container{
+    width: 400px;
+  }
+}

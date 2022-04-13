@@ -12,7 +12,7 @@ export function TodoList(props){
 
       {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
 
-      {props.searchedTodos.map(renderFunc)}
+      {(!props.loading && !props.error) && props.searchedTodos.map(renderFunc)}
 
       {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchText) }
 

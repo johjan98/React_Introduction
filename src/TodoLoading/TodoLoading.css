@@ -1,0 +1,29 @@
+.loading-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  border-radius: 8px;
+  border: 1px solid;
+  margin: 20px;
+  width: 80vw;
+  box-shadow: 0px 5px 10px black;
+  background-color: rgb(120, 120, 167);
+  opacity: 40%;
+}
+
+@media screen and (min-width: 767px) {
+  .loading-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    border-radius: 8px;
+    border: 1px solid;
+    margin: 20px;
+    width: 400px;
+    box-shadow: 0px 5px 10px black;
+    background-color: rgb(120, 120, 167);
+    opacity: 40%;
+  }
+}
