@@ -1,9 +1,11 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const TodoContext = React.createContext();
+// const TodoContext = React.createContext();  Se crea un context. En el return se crea la etiqueta TodoContext.provider y en la prop value se pasa un objeto con estado o variables que se quieren compartir. También se debe esportar el contexto y la función. Para usar el context se usa el hook useContext y como alrgumento el contexto que se quiere usar, se retorna un objeto con las variables o estados que se deseen consumir. const {prop1, prop2, ...} = React.useContext()
 
-function TodoProvider (props){
+// function TodoProvider (props){
+
+export function useTodos(){
 
   const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', []);
 
@@ -47,9 +49,7 @@ function TodoProvider (props){
     });
     saveTodos(newTodos);
   }
-
-  return (
-    <TodoContext.Provider value={{
+  return {
       error,
       loading,
       completedTodos,
@@ -61,11 +61,27 @@ function TodoProvider (props){
       deleteTodo,
       addTodo,
       openModal,
-      setOpenModal
-    }}>
-      {props.children}
-    </TodoContext.Provider>
-  );
+      setOpenModal};
+
+  // Uso del provider cuando se utiliza creatContext
+  // return (
+  //   <TodoContext.Provider value={{
+  //     error,
+  //     loading,
+  //     completedTodos,
+  //     totalTodos,
+  //     searchValue,
+  //     setSearchValue,
+  //     searchedTodos,
+  //     completeTodo,
+  //     deleteTodo,
+  //     addTodo,
+  //     openModal,
+  //     setOpenModal
+  //   }}>
+  //     {props.children}
+  //   </TodoContext.Provider>
+  // );
 };
 
-export {TodoContext, TodoProvider};
+// export {TodoContext, TodoProvider}; //usando context

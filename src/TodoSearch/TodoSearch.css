@@ -16,3 +16,7 @@
 .input-search:focus{
   outline-color: blue;
 }
+
+.input-search:disabled{
+  opacity: 40%;
+}

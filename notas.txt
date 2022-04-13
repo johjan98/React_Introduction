@@ -72,3 +72,62 @@ JSX: componentes vs. elementos (y props vs. atributos)
   Todas las propiedades las podemos mandar de dos formas, como lo vimos en la clase
   <App saludo=“Buenas” /> o usando “children” <App>Buenaaaaaas</App>(donde podemos poner también etiquetas de HTML) y 
   usandolo con props.children
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Curso de React.js: Patrones de Render y Composición:
+
+  https://funny-tibia-d59.notion.site/Patrones-de-render-en-React-f95f56f3f82b4a15925077cd1407cc6b
+
+
+¿Qué es composición de componentes y colocación del estado?
+
+  Es un patrón para crear componentes que nos da libertad para elegir dónde y cómo usamos nuestros componentes. Cada componente 
+  debe cumplir una tarea muy específica pero no debe de decirnos exactamente como usar esa solución que nos provee, debe ser 
+  muy flexible dándonos libertad para usar la información como queramos. Esto nos permite hacer a los componentes más fáciles de 
+  integrar al resto de componentes, y agiliza el proceso de reutilizar o hacer cambios en los componentes.
+
+  Colocación del estado:
+
+    ¿Dónde los guardamos? Este problema también se conoce como state colocation.
+
+    - Máxima cercanía a la relevancia: El estado debe estar tan cerca como sea posible de donde lo estemos usando y actualizando.
+    - Stateful vs stateless: Separar lógica y estado de componentes que manejan UI.
+
+  Ir de lo grande a lo específico.
+
+  Hay que examinar que componentes manejan su propio estado, asumiendo que todos los componentes consumen el estado general 
+  de la app queremos encontrar a los componentes que crean un estado aparte del general. De esta manera podemos dividir 
+  componentes, de un lado tendremos a los componentes que solo consumen el estado general de la app y esos son componentes 
+  stateless(de interfaz, de UI), y del otro lado a los componentes que crean su propio código interno (estado) serán los 
+  stateful y siguiendo el principio de separar al estado de la UI podemos dividir a estos componentes con su propio estado 
+  en 2 uno stateful, y el otro en stateless.
+
+
+¿Qué son las render props y render functions?
+
+  Nos ayudan a elevar nuestra composición de componentes a otro nivel.
+
+  Las render props nos permiten ser más específicos sobre que vamos a renderizar, cuando y donde vamos a renderizar cada 
+  parte del contenido de nuestros componentes.
+
+  Render Function:
+    Es el patrón de entregar la información de nuestro componente en una función. No es exclusivo de react context, nosotros 
+    podemos crear nuestros propios componentes que usen este patrón, que reciban una función para que le podamos enviar la 
+    información que queremos proveer y luego si, renderizar los componentes que ya tienen la info gracias a la función.
+
+  Render Props:
+    Cuando ya no mandamos la función dentro del componente, si no que la enviamos en alguna otra propiedad del componente. 
+    Podemos jugar con este patrón para que compartir información sea más divertido.
+
+React.Children y React.cloneElement:
+  
+  React.cloneElement:
+
+    Con esta característica de React podemos crear elementos de Nodos React.
+    Cabe aclarar que esta funciona con un unico nodo, en caso de aplicarla en un conjunto de los mismos podemos ayudarnos 
+    de React.Children.
+
+  React.Children
+
+    Nos permite manipular la prop children entre uno de sus usos podemos volver un conjunto de nodos react a un array
