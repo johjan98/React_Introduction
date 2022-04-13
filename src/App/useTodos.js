@@ -7,7 +7,12 @@ import { useLocalStorage } from "./useLocalStorage";
 
 export function useTodos(){
 
-  const {item: todos, saveItem: saveTodos, loading, error} = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos, 
+    saveItem: saveTodos, 
+    sincronizeItem: sincronizeTodos,
+    loading, 
+    error} = useLocalStorage('TODOS_V1', []);
 
   const [openModal, setOpenModal] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
@@ -61,7 +66,8 @@ export function useTodos(){
       deleteTodo,
       addTodo,
       openModal,
-      setOpenModal};
+      setOpenModal,
+      sincronizeTodos};
 
   // Uso del provider cuando se utiliza creatContext
   // return (

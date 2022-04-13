@@ -120,6 +120,7 @@ Curso de React.js: Patrones de Render y Composición:
     Cuando ya no mandamos la función dentro del componente, si no que la enviamos en alguna otra propiedad del componente. 
     Podemos jugar con este patrón para que compartir información sea más divertido.
 
+
 React.Children y React.cloneElement:
   
   React.cloneElement:
@@ -130,4 +131,14 @@ React.Children y React.cloneElement:
 
   React.Children
 
-    Nos permite manipular la prop children entre uno de sus usos podemos volver un conjunto de nodos react a un array
+    Nos permite manipular la prop children entre uno de sus usos podemos volver un conjunto de nodos react a un array.
+
+
+Qué son los High Order Components:
+
+  Las funciones como las conocemos pueden devolvernos un valor en sus returns, pero estas funciones de “orden superior”, 
+  son funciones que devuelven otras funciones.
+
+  Si llamamos a la high order function y le enviamos un parámetro no tendremos todavía un resultado, como está devolviendo 
+  otra función tenemos que llamar a esa función que obtenemos luego de llamar a la de orden superior, enviarle los nuevos 
+  parámetros que necesita la función de retorno y entonces si, obtendremos nuestro resultado.
