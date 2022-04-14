@@ -13,7 +13,7 @@ import { TodoError } from '../TodoError';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from "../Modal";
 import { TodoForm } from "../TodoForm";
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 function App() {  
 
@@ -111,7 +111,7 @@ function App() {
           openModal={openModal}
           setOpenModal={setOpenModal}
         />
-        <ChangeAlertWithStorageListener  
+        <ChangeAlert 
           sincronize={sincronizeTodos}
         />
       </div>

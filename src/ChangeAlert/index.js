@@ -1,10 +1,13 @@
 import React from "react";
-import { withStorageListener } from "./withStorageListener";
+import { useStorageListener } from "./useStorageListener";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRotateRight, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import './ChangeAlert.css';
 
-function ChangeAlert({show, toggleShow}){
+export function ChangeAlert({sincronize}){
+
+  const {show, toggleShow} = useStorageListener(sincronize);
+
   if(show){
     return (
       <div className={`main-container ${show && 'color'}`}>
@@ -26,6 +29,3 @@ function ChangeAlert({show, toggleShow}){
     return null;
   }
 }
-
-export const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert);
-
